@@ -8,8 +8,14 @@ jobs:
     name: first job
     runs-on: ubuntu-latest
     steps:
+      - name: before checkout action
+        uses: ls
+        shell: bash
+
       - name: checkout steps
-        uses: actions/checkout@v3
-      - name: run maven 
-        run: mvn clean package
+        uses: actions/checkout@v4
+        shell: bash
+
+      - name: after checkout action
+        uses: ls
         shell: bash
