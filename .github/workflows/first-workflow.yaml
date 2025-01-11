@@ -8,14 +8,8 @@ jobs:
     name: first job
     runs-on: ubuntu-latest
     steps:
-      - name: before checkout action
-        uses: ls
+      - name: bash command
+        uses: echo "first workflos"
         shell: bash
 
-      - name: checkout steps
-        uses: actions/checkout@v4
-        shell: bash
-
-      - name: after checkout action
-        uses: ls
-        shell: bash
+      
